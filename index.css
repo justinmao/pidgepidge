@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body { background: #F9EAE2; }
+
+.center {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center img {
+  max-height: 60vh;
+  max-width: 80vw;
+}
