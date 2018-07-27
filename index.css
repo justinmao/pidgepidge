@@ -7,11 +7,13 @@ html, body {
 body { background: #F9EAE2; }
 
 .center {
+  opacity: 0;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 3s;
 }
 
 .center img {
