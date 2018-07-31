@@ -26,7 +26,7 @@ body { background: #F9EAE2; }
 }
 
 p {
-  margin-top: 7vh;
+  margin-top: 8vh;
   font-family: "Lato", sans-serif;
   font-size: 16px;
 }
@@ -34,5 +34,6 @@ p {
 @media only screen and (max-width: 600px) {
     p {
         font-size: 14px;
+        margin-top: 14vh;
     }
 }
