@@ -1,23 +1,66 @@
 @import url("https://use.typekit.net/dnb0iig.css");
 
+@font-face {
+  font-family: YuantiSCLight;
+  src: url(YuantiSCLight.ttf);
+}
+
+@font-face {
+  font-family: AvenirLight;
+  src: url(AvenirLight.ttf);
+}
+
+@font-face {
+  font-family: AvenirLightOblique;
+  src: url(AvenirLightOblique.ttf);
+}
+
 html, body {
   margin: 0;
   height: 100%;
   width: 100%;
-  color: #C77C02;
 }
 
-body { background: #F9EAE2; }
+body {
+  color: #C77C02;
+  background: #F9EAE2;
+  font-size: 1.8vh;
+  letter-spacing: 0.05em;
+}
+
+#fade-in {
+  opacity: 0;
+  transition: 3s;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  margin: 24px;
+  font-family: AvenirLight;
+}
+
+header > div {
+  margin: 24px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  header, header > div { margin: 12px; }
+}
+
+#fr { display: none; }
+#cn { display: none; }
 
 .center {
-  opacity: 0;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: 3s;
 }
 
 .center img {
@@ -27,11 +70,16 @@ body { background: #F9EAE2; }
 
 p {
   margin-top: 8vh;
-  font-family: azo-sans-web, sans-serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1.6vh;
-  letter-spacing: 0.05em;
+  font-family: AvenirLight, azo-sans-web, sans-serif;
+}
+
+i {
+  font-family: AvenirLightOblique, azo-sans-web, sans-serif;
+  font-style: normal;
+}
+
+.cn {
+  font-family: YuantiSCLight;
 }
 
 /* @media only screen and (max-width: 600px) {
