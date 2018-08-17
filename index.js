@@ -21,9 +21,9 @@
     var en = document.getElementById('en');
     var fr = document.getElementById('fr');
     var cn = document.getElementById('cn');
-    en.style.display = 'none';
-    fr.style.display = 'none';
-    cn.style.display = 'none';
+    en.style.opacity = 0;
+    fr.style.opacity = 0;
+    cn.style.opacity = 0;
     if (lang == 'en') {
       en.style.display = 'flex';
     } else if (lang == 'fr') {
@@ -31,6 +31,22 @@
     } else if (lang == 'cn') {
       cn.style.display = 'flex';
     }
+    setTimeout(() => {
+      en.style.display = 'none';
+      fr.style.display = 'none';
+      cn.style.display = 'none';
+      if (lang == 'en') {
+        en.style.display = 'flex';
+        en.style.opacity = 1;
+      } else if (lang == 'fr') {
+        fr.style.display = 'flex';
+        fr.style.opacity = 1;
+      } else if (lang == 'cn') {
+        cn.style.display = 'flex';
+        cn.style.opacity = 1;
+      }
+    }, 1200);
+
   }
 
   window.onresize = checkWidth;
@@ -49,7 +65,7 @@
     });
     // Fade in
     setTimeout(() => {
-      document.getElementById("fade-in").style.opacity = 1;
+      document.getElementById("en").style.opacity = 1;
     }, 500);
   }
 })();
